@@ -1,0 +1,1 @@
+rails g testing_framework_adapter Jasmine

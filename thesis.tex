@@ -1,0 +1,309 @@
+\documentclass[a4paper, oneside]{book}
+
+\PassOptionsToPackage{hyphens}{url}
+
+\usepackage[bookmarksdepth=4, hidelinks]{hyperref}
+\usepackage[ngerman, english]{babel}
+\usepackage{bookmark}
+\usepackage{caption}
+\usepackage{color}
+\usepackage[a4paper, bindingoffset=1cm, textwidth=360pt]{geometry}
+\usepackage[nogroupskip, nonumberlist, nopostdot]{glossaries}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[chapter]{minted}
+\usepackage[all]{nowidow}
+\usepackage[super]{nth}
+\usepackage{textcomp}
+\usepackage{upquote}
+\usepackage[hyphens]{url}
+\usepackage{xspace}
+
+\def\labelitemi{--}
+
+\hypersetup{pdfauthor={Hauke Klement}, pdftitle={A Versatile Platform for Practical Programming Exercises in Massive Open Online Courses}}
+
+\input{tex/00_acronyms}
+\makeglossaries
+
+\newenvironment{abstract}{\thispagestyle{plain}\null\vfill\begin{center}\bfseries\abstractname\end{center}}{\vfill\null}
+
+\newcommand{\cs}{\gls{cs}\xspace}
+\newcommand{\foo}[1]{\footnote{\url{{#1}}}}
+\newcommand{\mooc}{\gls{mooc}\xspace}
+\newcommand{\moocs}{\glspl{mooc}\xspace}
+\newcommand{\tool}{Code Ocean\xspace}
+
+\setcounter{tocdepth}{1}
+
+\setglossarystyle{super}
+
+\setlength{\marginparwidth}{0pt}
+
+\usemintedstyle{friendly}
+
+\begin{document}
+
+% ----------------------------------------------------------------------------------------------------
+
+\frontmatter
+
+% ----------------------------------------------------------------------------------------------------
+
+\begin{titlepage}
+  \begin{center}
+    \includegraphics[clip=true, trim=0 3.9cm 5.4cm 0, width=5cm]{images/hpi-logo.pdf}
+    \\[2.5em]
+    \Large
+    Master's Thesis
+    \\[1.5em]
+    \LARGE
+    A Versatile Platform for\\Practical Programming Exercises in\\Massive Open Online Courses
+    \\[1em]
+    Eine vielseitige Plattform für\\praktische Programmieraufgaben in\\Massive Open Online Courses
+    \\[1.5em]
+    \Large
+    Hauke Klement
+    \\[2.5em]
+    \large
+    Submitted on
+    \\
+    Friday, December \nth{19}, 2014
+    \\[1.5em]
+    Chair
+    \\
+    Internet Technologies and Systems
+    \\[1.5em]
+    Supervisors
+    \\
+    Prof.\ Dr.\ Christoph Meinel
+    \\
+    Dipl.-Inf.\ (FH) Jan Renz
+    \\
+    Thomas Staubitz, M.Sc.
+    \\
+    Dipl.-Inf.\ Christian Willems
+  \end{center}
+\end{titlepage}
+
+% ----------------------------------------------------------------------------------------------------
+
+\cleardoublepage
+
+\pdfbookmark{\abstractname}{\abstractname}
+
+\begin{abstract}
+  \input{tex/01_abstract}
+\end{abstract}
+
+\glsresetall
+
+\begin{otherlanguage}{ngerman}
+  \pdfbookmark{\abstractname}{\abstractname}
+  \begin{abstract}
+    \input{tex/02_zusammenfassung}
+  \end{abstract}
+\end{otherlanguage}
+
+\glsresetall
+
+% ----------------------------------------------------------------------------------------------------
+
+\cleardoublepage
+
+\pdfbookmark{Acknowledgements}{Acknowledgements}
+
+\chapter*{Acknowledgements}
+
+\input{tex/03_acknowledgements}
+
+% ----------------------------------------------------------------------------------------------------
+
+\cleardoublepage
+
+\pdfbookmark{\contentsname}{\contentsname}
+
+\addtocontents{toc}{\protect\enlargethispage{\baselineskip}}
+
+\tableofcontents
+
+% ----------------------------------------------------------------------------------------------------
+
+\mainmatter
+
+% ----------------------------------------------------------------------------------------------------
+
+\chapter{Introduction}
+
+\label{chapter:introduction}
+
+\input{tex/11_motivation}
+
+\input{tex/12_research_question}
+
+\input{tex/13_outline}
+
+% ----------------------------------------------------------------------------------------------------
+
+\chapter{Background}
+
+\label{chapter:background}
+
+\input{tex/20_background}
+
+\input{tex/21_moocs}
+
+\input{tex/22_openhpi}
+
+\input{tex/23_practical_programming}
+
+\input{tex/24_web_based_development_tools}
+
+\input{tex/25_assessment1}
+
+\input{tex/26_development_environment1}
+
+\input{tex/27_competition}
+
+% ----------------------------------------------------------------------------------------------------
+
+\chapter{Concept}
+
+\label{chapter:concept}
+
+\input{tex/30_concept}
+
+\input{tex/31_requirements}
+
+\input{tex/32_development_environment2}
+
+\input{tex/33_code_execution1}
+
+\input{tex/34_hint_generation1}
+
+\input{tex/35_assessment2}
+
+\input{tex/36_interoperability1}
+
+% ----------------------------------------------------------------------------------------------------
+
+\chapter{Implementation}
+
+\label{chapter:implementation}
+
+\input{tex/40_implementation}
+
+\input{tex/41_building_blocks}
+
+\input{tex/42_domain_model}
+
+\input{tex/43_development_environment3}
+
+\input{tex/44_code_execution2}
+
+\input{tex/45_hint_generation2}
+
+\input{tex/46_assessment3}
+
+\input{tex/47_interoperability2}
+
+\input{tex/48_content_creation}
+
+% ----------------------------------------------------------------------------------------------------
+
+\chapter{Evaluation}
+
+\label{chapter:evaluation}
+
+\input{tex/50_evaluation}
+
+\input{tex/51_scalability}
+
+\input{tex/52_versatility}
+
+% ----------------------------------------------------------------------------------------------------
+
+\chapter{Future Work}
+
+\label{chapter:future-work}
+
+\input{tex/60_future_work}
+
+% ----------------------------------------------------------------------------------------------------
+
+\chapter{Conclusion}
+
+\label{chapter:conclusion}
+
+\input{tex/70_conclusion}
+
+% ----------------------------------------------------------------------------------------------------
+
+\backmatter
+
+% ----------------------------------------------------------------------------------------------------
+
+\clearpage
+
+\pdfbookmark{\bibname}{\bibname}
+
+\bibliographystyle{plainurl}
+
+\bibliography{references}
+
+% ----------------------------------------------------------------------------------------------------
+
+\clearpage
+
+\pdfbookmark{List of Acronyms}{List of Acronyms}
+
+\printglossary[title=List of Acronyms]
+
+% ----------------------------------------------------------------------------------------------------
+
+\clearpage
+
+\pdfbookmark{\listfigurename}{\listfigurename}
+
+\listoffigures
+
+% ----------------------------------------------------------------------------------------------------
+
+\renewcommand{\listoflistingscaption}{List of Listings}
+
+\clearpage
+
+\pdfbookmark{\listoflistingscaption}{\listoflistingscaption}
+
+\listoflistings
+
+% ----------------------------------------------------------------------------------------------------
+
+\clearpage
+
+\pdfbookmark{List of Tables}{List of Tables}
+
+\listoftables
+
+% ----------------------------------------------------------------------------------------------------
+
+\chapter*{Declaration of Originality}
+
+\input{tex/98_declaration_of_originality1}
+\\[1.5em]
+\begin{otherlanguage}{ngerman}
+  \input{tex/99_declaration_of_originality2}
+\end{otherlanguage}
+\\[3em]
+Potsdam, December \nth{19}, 2014
+\hfill
+\begin{minipage}[t][3em][b]{0.5\textwidth}
+  \hrule
+  \vspace{0.25em}
+  \centering
+  Hauke Klement
+\end{minipage}
+
+% ----------------------------------------------------------------------------------------------------
+
+\end{document}

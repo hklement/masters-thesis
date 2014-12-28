@@ -1,0 +1,3 @@
+Your object '$2' of class '$3' does not understand
+the method '$1'. Maybe you made a typing mistake
+or still have to implement that method.

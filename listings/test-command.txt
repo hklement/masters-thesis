@@ -1,0 +1,1 @@
+rspec %{filename} --format documentation

@@ -1,0 +1,3 @@
+## Outline
+
+The subsequent chapters are organized as follows: Chapter \ref{chapter:background} provides background on several subjects associated to the topic of this work. Chapter \ref{chapter:concept} covers the concepts that \tool is based upon. Chapter \ref{chapter:implementation} focuses on the implementation of the application. Chapter \ref{chapter:evaluation} presents an evaluation in terms of scalability and versatility. Chapter \ref{chapter:future-work} proposes future work. Finally, Chapter \ref{chapter:conclusion} draws a conclusion.

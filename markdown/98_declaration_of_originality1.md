@@ -1,0 +1,1 @@
+I hereby declare that I have prepared this master’s thesis myself and without inadmissible assistance. I certify that all citations and contributions by other authors used in this thesis or that led to the ideas behind this thesis have been properly identified and referenced in written form. I also warrant that the same applies to the implementation of the project.

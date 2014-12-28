@@ -1,0 +1,85 @@
+\section{Programming Tools Used in MOOCs}\label{section:competition}
+
+In order to determine the status quo of programming tools used in \moocs, we regarded a number of courses offered by the major international \mooc providers Coursera, edX, and Udacity, as well as two German \mooc providers, which are Iversity and openHPI.
+
+\subsection{Usage of Quiz Capabilities}
+
+Besides offering practical tasks, many programming courses employ standard built-in assessment capabilities, such as fill-in-the-gap and multiple-choice questions, for teaching programming. For example, learners are presented with some lines of code and are asked to identify mistakes or to reason about the state of variables after execution. For the sake of automated assessability, a number of possible answers are given, which the learner has to pick the correct ones from.
+
+Such quiz-based exercises can only supplement the content of a programming course. While tasks of this nature require learners to understand code written by others and to reason about its behavior, there is no creative problem-solving process involved. However, for learning programming it is important that students program by themselves. According to Lahtinen et al.~\cite{lahtinen2005study}, course materials should rather have a problem-solving nature than only representing concepts since success in creating a functional program is a major positive force for programming beginners.
+
+\subsection{Comparison of Specialized Programming Tools}
+
+This section presents a comparison of programming tools used in exemplary \moocs with regard to approach, functionality, and usability.
+
+Python, being considered as an intuitive, powerful, and easy to learn programming language~\cite{blank2006robots} is taught in half of the regarded courses due to its suitability as a beginners' language. In fact, Python has recently become the primary language for teaching introductory \cs courses at top-ranked universities in the United States~\cite{guo2014python}. In line with this, almost all of the regarded \mooc providers offer introductory programming courses in Python.
+
+\subsubsection{Coursera: \texorpdfstring{“Programming for Everybody”}{Programming for Everybody}}
+
+Coursera's course ``Programming for Everybody''\foo{https://www.coursera.org/course/pythonlearn} is specifically designed to be a first programming course. It teaches the Python programming language.
+
+The course makes use of an open-source, web-based development environment\foo{https://github.com/csev/tsugi} for writing and assessing practical programming exercises. The tool is based on CodeMirror and Skulpt, an in-browser implementation of Python, providing client-side code execution.
+
+The development environment's \gls{ui} contains exercise instructions, a single editable code area, an area for program output as well as buttons for running and resetting code.
+
+Since no request to the server is required, the tool's client-side code evaluation approach has the advantage of short response times. However, we experienced that infinite loops are not identified and suspended after a certain time but occupy client-side computing power, eventually rendering the browser window unresponsive.
+
+Apart from this, program errors are reported using native browser alert dialogs. Error messages are reduced to the essential. They neither contain a traceback nor provide additional clues to the error's origin.
+
+Whenever code is executed, it is also checked against the exercise specification. The programming tool performs automatic grading, based on \gls{io} matching and basic invocation checks at runtime. The grading approach can only grant full score or zero points. Partial solutions, however, are not awarded.
+
+Besides auto-graded programming assignments, Coursera's course contains two optional peer-graded essays.
+
+\subsubsection{edX: \texorpdfstring{“Engineering Software as a Service”}{Engineering Software as a Service}}
+
+The course ``Engineering Software as a Service''\foo{https://www.edx.org/course/engineering-software-service-uc-berkeleyx-cs169-1x}, offered by edX, teaches the fundamentals of developing \gls{saas} using agile techniques and Ruby on Rails.
+
+The course does not make use of a web-based development environment, but it relies on desktop applications and third-party infrastructure. To facilitate the start, the instructors provide learners with a \gls{vm} image. Alternatively, they propose to use a web-based \gls{ide}. Moreover, the instructors encourage students to perform remote pair programming for solving the course assignments.
+
+The course advances from the basics of Ruby, through introducing Rails, to teaching \gls{bdd} and \gls{tdd}. Analogous to the course content, practical assignments range from writing short Ruby programs, through extending a Rails application and deploying it to Heroku, to implementing features that have to be backed by passing unit tests.
+
+Exercise solutions are handed in by uploading code or entering the \gls{url} of the deployed application, respectively. Viewing the exercise specification, submitting a solution, and receiving grading feedback are facilitated through a one-page workflow.
+
+In order to assess practical exercises, the course utilizes a tailor-made automatic grader\foo{https://github.com/saasbook/rag}, which is based on established Ruby development tools for \gls{bdd}, \gls{tdd}, and quality control. The grading feedback that is provided to learners equals the standard output of the RSpec\foo{http://rspec.info/} testing framework, including entire backtraces in the case of errors. Although RSpec examples are usually defined in a meaningful, readable manner, unaltered framework output might not be sufficiently clear for novices in search of remaining code deficiencies.
+
+\subsubsection{Udacity: \texorpdfstring{“Intro to Computer Science”}{Intro to Computer Science}}
+
+Udacity's course ``Intro to Computer Science''\foo{https://www.udacity.com/course/cs101} is an introductory \cs course that teaches Python by the example of building a basic search engine.
+
+The course makes use of a lightweight web-based development tool, which is based on CodeMirror and seamlessly integrates into the Udacity platform.
+
+The editor is easy to operate, but it provides no means for editing more than one unit of code. Exercise instructions are provided as comments in the skeleton source code and sometimes in the form of a short introductory video. Buttons below the editor enable learners to start the exercise from scratch, execute their code for exploration, submit their code for evaluation, recapitulate the instructional video, or view a sample solution, which is presented in a step-by-step fashion.
+
+When an error occurs during program execution, Python's standard traceback is presented, which might be too cryptic for beginners. However, when the same error occurs during test execution, basic hints pointing to corrective actions are provided, though not adjusted to include actual identifiers from the student's code. The result of successful test-based code assessment is briefly presented in natural language, which benefits comprehensibility but lacks valuable details, such as expected and actual program behavior.
+
+\subsubsection{Iversity: \texorpdfstring{“Algorithmen und Datenstrukturen”}{Algorithmen und Datenstrukturen}}
+
+Iversity's course ``Algorithmen und Datenstrukturen''\foo{https://iversity.org/de/courses/algorithmen-und-datenstrukturen} teaches algorithms and data structures using the Java programming language.
+
+Although the course addresses beginners, a web-based code editor is not provided. Instead, course participants are required to write, compile, and run code on their \glspl{pc}.
+
+The course employs a hybrid assessment approach. Hands-on assignments are assessed using both \gls{io}-based automated assessment and peer evaluation. In the case of errors, the automated assessor does not provide guidance but only non-specific proposals to review the submission for syntactical errors, infinite loops, and faulty recursion.
+
+Apart from this, programming assignments entail other shortcomings in usability. If a program skeleton is provided, it has to be copied manually from the exercise instructions. Likewise, code to be evaluated by peers has to be pasted into a text input area although already submitted as a ZIP archive for the purpose of automatic evaluation. Furthermore, evaluation results are not displayed within the submission form, but they must be accessed separately as soon as available.
+
+\subsubsection{openHPI: \texorpdfstring{“Spielend Programmieren lernen”}{Spielend Programmieren lernen}}
+
+openHPI's very first special-purpose tool for practical programming exercises is used in the beginners' Python programming course ``Spielend Programmieren lernen''\foo{https://open.hpi.de/courses/pythonjunior2014}. The course covers basic programming constructs within a four-week timespan and is primarily aimed at school children.
+
+Programming exercises are performed using a web-based development tool that is started from the openHPI platform. The tool's \gls{ui} is rather simple. Its window contains plain-text exercise instructions on the top as well as some hints on how to use the tool in the bottom. The greater part of the window is split up into a code editor and an area for program output. The code editor is based on CodeMirror and is limited to a single editable area, which might be sufficient for short programs to be expected in a beginners' course.
+
+One button allows to execute the program. A second button triggers evaluation for correctness. Learners can execute and validate their code as often as desired. When an error occurs, the standard stack trace is presented to the student. If a solution is free of programming errors but does not fulfill the exercise specification, the tool provides textual feedback in a stepwise fashion. For example, in order to solve an exercise, the tool suggests to define a certain method, to call that method, and to store the result into a variable that is checked during program evaluation.
+
+Assessment is based on automated evaluation. The grader does not grant points for partial solutions. A participant can either receive the full score or no points at all.
+
+Von Löwis et al.~\cite{loewis2014scaling} report that the Python course was well received and gained very positive feedback. Nevertheless, users reported problems with the automatically graded programming exercises. Learners either felt that assessment was too restrictive or would have preferred an explanation as to why their solutions are incorrect. Also, programming errors that were caused by participants were sometimes not recognized as self-inflicted but were perceived as flaws in the system.
+
+\subsubsection{openHPI: \texorpdfstring{“Parallel Programming”}{Parallel Programming}}
+
+Whereas the first iteration of openHPI's course ``Parallel Programming''\foo{https://open.hpi.de/courses/parprog2014} included only optional programming tasks, which had to be executed on learners' \glspl{pc} and were not assessable, possible future iterations should feature assessable hands-on exercises.
+
+Müller~\cite{mueller2014security} presents a web-based programming evaluation system that is targeted at being used in this context. The system is an extension of OpenSubmit\foo{https://github.com/troeger/opensubmit}, an assignment management application used in the context of some of the \gls{hpi}'s on-campus courses. The tool is primarily designed as an execution platform providing resource fairness, performance isolation, and multi-threading support, which are important characteristics for practical assignments concerning parallel programming techniques.
+
+In terms of assessment, the web application provides a front-end for submitting complete program solutions, which are checked for successful compilation and are optionally validated using a custom validation script. The system can neither provide supportive feedback nor fine-grained assessment beyond a binary decision.
+
+While the system follows a flexible code execution approach, content management capabilities offer potential for improvement. The preparation of exercises and \gls{os} templates is reported to be a manual, tedious task~\cite{mueller2014security}.

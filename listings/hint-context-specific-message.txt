@@ -1,0 +1,3 @@
+Your object 'main' of class 'Object' does not understand
+the method 'fibonaci'. Maybe you made a typing mistake
+or still have to implement that method.

@@ -1,0 +1,25 @@
+## openHPI {#section:openhpi}
+
+This thesis was created in the research context of openHPI\foo{https://open.hpi.de/}, which is a non-profit provider of \moocs, hosted by the \gls{hpi} in Potsdam, Germany. Current research around openHPI deals, among others, with the questions how to raise completion rates in \moocs through gamification \cite{willems2014motivating} and social engagement \cite{fricke2014raising}, how to integrate peer assessment into the grading process \cite{petrick2014designing}, and how to provide a flexible framework for learning analytics.
+
+##### Introduction
+
+openHPI started in September 2012, making the \gls{hpi} the first European university institute to offer interactive online courses \cite{willems2014reflections}. The first course “In-Memory Data Management”\foo{https://open.hpi.de/courses/imdb2012} was offered by the \gls{hpi}’s founder and patron Hasso Plattner. Two months later, the second course “Internetworking with TCP/IP”\foo{https://open.hpi.de/courses/internetworking} represented the first x\mooc held in German language. Since then, 13 different courses have been offered to a general audience, reaching enrollment counts in the lower five-figure range.
+
+openHPI’s online courses are adaptations of the \gls{hpi}’s on-campus courses. They cover \cs topics, such as databases \cite{naumann2014ein,plattner2013course}, Internet technologies \cite{willems2014reflections}, and programming concepts \cite{loewis2014scaling,mueller2014security}. According to Meinel and Willems \cite{meinel80openhpi}, openHPI courses typically follow the same didactic pattern: They have a fixed start date, are split up into six consecutive one-week modules, and are concluded with a final exam. After a course has ended, its contents usually remain accessible for self-paced learning.
+
+Course content mainly comprises video lectures, reading material, optional self-tests for diagnostic assessment, as well as weekly mandatory homework for performance evaluation. Practical exercises and assignments, however, are rare but demanded. When the instructors of openHPI’s first course asked for missing features, a remarkable number of users explicitly asked for practical tasks \cite{willems2013introducing}.
+
+##### Practical Assignments
+
+During the evolution of the openHPI platform \cite{meinel2013openhpi,meinel80openhpi}, the capabilities for providing practical tasks have undergone considerable changes.
+
+In the early days of openHPI, the platform did not support integrated hands-on exercises. Instead, some courses involved optional practical tasks, which had to be solved on students’ \glspl{pc}. These tasks were not assessed \cite{naumann2014ein} or were assessed indirectly through multiple-choice questions relating to the students’ practical work \cite{willems2013introducing}.
+
+Although practical exercises were optional and entailed a comparatively low reward for the effort to be taken, the vast majority of active course participants took the chance to participate \cite{staubitz2014lightweight}. A survey among the course participants revealed that about 80 percent of them considered practical exercises being useful for their learning outcomes. Also, the majority of course participants wished for more practical exercises, making them the most desired type of course content.
+
+However, the inhomogeneity among learners’ hardware and software configurations resulted in many support requests, which required significant commitment and goodwill of the teaching team \cite{willems2013introducing}.
+
+The subsequent course “Web-Technologien”\foo{https://open.hpi.de/courses/www} continued to leverage standard quiz assessment capabilities as a workaround for assessing practical exercises. However, instead of using learners’ \glspl{pc} as execution platform for practical tasks, the course focused on utilizing the freely available third-party tool JSFiddle\foo{http://jsfiddle.net/}. Learners were invited to solve publicly available programming tasks, which yield a code word when solved correctly. Although this approach provides practical tasks in an installation-free and homogeneous environment, Staubitz et al\. \cite{staubitz2014lightweight} consider it to be too limited and underline the need for a full-fledged integrated programming tool that provides an automated workflow, more complex programming tasks, and better feedback mechanisms.
+
+In 2014, the original \gls{lms}-based openHPI platform has been replaced by a newly developed in-house solution. Since then, openHPI supports the integration of external special-purpose tools, which allow conducting workshops with a strong focus on hands-on tasks and practical exercises \cite{loewis2014scaling}.
